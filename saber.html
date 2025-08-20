@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dicionário Java script - iniciantes</title>
+    <!-- Ícone da página -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
+    />
+    
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="saber.css">
+    <!-- CSS para highlight.js (realce de código) -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <!-- Highlight.js JS para realçar blocos de código -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  </head>
+  <body>
+  <div class="container">
+    <a href="index.html">Voltar</a>
+    <h1>O que eu preciso saber para programar em Java Script?</h1>
+
+    <p>Para ter uma boa noção de programação em Java Script, deve-se ter uma boa noção dos elementos básicos do Java Script:</p>
+
+    <ul>
+      <li>
+        <strong>Saber o que é uma function</strong>
+        <button class="mostrar-mais">Mostrar Mais</button>
+      </li>
+      <div class="conteudo">
+        <p>Explicação sobre function...</p>
+      </div>
+
+      <li>
+        <strong>Quais são os jeitos para programar em JavaScript</strong>
+        <button class="mostrar-mais">Mostrar Mais</button>
+      </li>
+      <div class="conteudo">
+        <p>Explicação sobre formas de programar...</p>
+      </div>
+
+      <li>
+        <strong>O que são variáveis</strong>
+        <button class="mostrar-mais">Mostrar Mais</button>
+      </li>
+      <div class="conteudo">
+        <p>Explicação sobre variáveis...</p>
+        </div>
+
+
+
+         <li>
+            <strong>Index</strong>
+             <button class="mostrar-mais"> Mostrar mais</button></li>
+             <div class="conteudo">
+          <p>let é uma palavra-chave usada para declarar variáveis em JavaScript. As variáveis declaradas com let têm escopo de bloco, o que significa que elas só são acessíveis dentro do bloco onde foram definidas.</p>
+          <pre><code class="language-javascript">let nome = "João";</code></pre>
+          <ul>
+            
+            <p>Pensa no for como um contador que anda pelos botões um por um. Ele tem 3 partes: <br><br>
+<li>Inicialização:  <pre><code>let i = 0</code></pre></li>
+
+<li>começa o contador <pre><code>i no 0.</code></pre></li>
+
+<p>Por quê 0? Porque listas em JS começam no 0: o 1º botão é botoes[0], o 2º é botoes[1], etc.</p> <br>
+
+<li>condição: <pre><code>i < botoes.length</code></pre></li>
+
+<p>Pergunta: “ainda existe botão na posição i?”</p> <br>
+
+<p>botoes.length é a quantidade total de botões. Enquanto i for menor que esse total, o loop continua.</p> <br>
+
+<p>Isso garante que o último i usado é length - 1 (o último índice válido).</p> <br>
+
+<li>incremento:<pre><code> i++</code></pre></li>
+
+depois de cada volta, faz i = i + 1 (vai para o próximo botão). </ul></p>
+
+      </div>
+       
+    </ul>
+
+   
+         
+  </div>
+
+  
+ <script>
+    let conteudos = document.querySelectorAll('.conteudo');
+    let botoes = document.querySelectorAll('.mostrar-mais'); //pega todos os as div com os conteudos dentro e todos os botoes com o mostrar mais//
+
+    function toggleConteudo(index) {
+        let conteudo = conteudos[index]; //cria a função toggleConteudo, cria outra let com o nome conteudo, que pega a let conteudos e todos os conteudos dentro dela, e o index faz que eles viram de 0 a 2, ou seja, o primeiro conteudo é o de index 0, o segundo é o de index 1 e assim por diante//
+
+        conteudo.classList.toggle('aberto');  //aqui ele pega a let conteudo que se juntou com a let conteudos, e adiciona a classe aberto, que faz com que o conteudo fique visivel quando o botão for clicado//
+    }
+
+    for (let i = 0; i < botoes.length; i++) { //aqui ele determina que i=0, e enquanto i for menor que o tamanho da let botoes, ele vai adicionar um evento de click a cada botão, ou seja, até acabar os botoes//
+
+
+        botoes[i].addEventListener('click', function() {
+            toggleConteudo(i);  //aqui ele pega os botoes com o i, e adiciona um evento que quando clicar, vai chamar a função toggleConteudo, que vai pegar o index do botão que foi clicado, e vai abrir ou fechar o conteudo correspondente a ele, ou seja, botao1, conteudo1//
+        })
+    }
+ </script>
+</body>

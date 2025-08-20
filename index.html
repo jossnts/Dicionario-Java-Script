@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dicionário Java script - iniciantes</title>
+    <!-- Ícone da página -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
+    />
+    
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalizze.css">
+    <!-- CSS para highlight.js (realce de código) -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <!-- Highlight.js JS para realçar blocos de código -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  </head>
+  <body>
+    <div class="container">
+    
+      
+      
+      <div id="sidebar" class="sidebar">
+            <h2>Elementos Java Script</h2>
+            <a href="#window">window</a>
+            <a href="#byid">getElementById</a>
+            <a href="#bytag">getElementsByTagName</a>
+            <a href="#byclass">getElementsByClassName</a>
+            <a href="#selector">querySelector</a>
+            <a href="#selectorall">querySelectorAll</a>
+            <a href="#inner">innerHTML</a>
+            <a href="#style">style</a>
+        </div>
+        <button class="menu-btn" id="menuBtn"> <i id="botao" class="fa-solid fa-chevron-right"></i> </button>
+        
+    
+      <h3 id="titulo">Dicionário para iniciantes no Java script</h3>
+
+      <a href="https://github.com/jossnts"> <i id="git" class="fa-brands fa-github"></i></a>
+
+      <p>
+        Esse é um dicionário de Java Script onde vou passar alguns código Java script e explicar para o que cada um serve para usar junto com os
+        códigos HTML e CSS
+      </p>
+
+      <button id="saber"> 
+      <a href="saber.html">O que você precisa saber antes: (EM DESENVOLVIMENTO)</a>
+        </button>
+      <strong id="window">1.window(alert, prompt, confirm) </strong>
+
+      <ul>
+        <li><strong>Quando usar?</strong> Quando quisermos criar uma janela ao entrar no site, de alerta, pergunta ou digitação</li>
+        <li><strong>Para que serve?</strong> Serve para interagir com o usuário, exibindo mensagens, solicitando informações ou confirmando ações.
+        </li>
+        <li><strong>Exemplo Prático:</strong></li>
+      </ul>
+
+      <div class="demo">
+        <!-- Botões que chamam funções JavaScript para mostrar alertas, confirmação e prompt -->
+        <button onclick="mostrarAlert()"> Mostrar Alerta </button>
+        <button onclick="mostrarConfirm()"> Mostrar Confirmação </button>
+        <button onclick="mostrarPrompt()"> Mostrar Pergunta </button>
+      </div>
+     
+      <div class="codigo">
+<pre><code>html
+&lt;div class="demo"&gt;
+&lt;!-- Botões que chamam funções JavaScript para mostrar alertas, confirmação e prompt --&gt;
+&lt;button onclick="mostrarAlert()"&gt; Mostrar Alerta &lt;/button&gt;
+&lt;button onclick="mostrarConfirm()"&gt; Mostrar Confirmação &lt;/button&gt;
+&lt;button onclick="mostrarPrompt()"&gt; Mostrar Pergunta &lt;/button&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="codigo"><pre><code>&lt;script&gt;
+    function mostrarAlert() {
+     window.alert("Olá, seja bem-vindo ao meu dicionário de Java script!"); // Exibe um alerta com uma mensagem
+    }
+    function mostrarConfirm() {
+    window.confirm("Quer ter acesso a esse conteúdo?"); // Exibe uma caixa de confirmação com uma pergunta
+    }
+    function mostrarPrompt() {
+    window.prompt("Me fale seu nome e vamos começar!"); // Exibe uma caixa de entrada para o usuário digitar algo
+    }
+&lt;/script&gt;</code></pre>
+</div>
+
+<div class="resumo">
+  <h3>O que significa isso?</h3>
+
+  <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">function mostrarAlert()</strong> → Cria uma função chamada <em>mostrarAlert</em>.  
+  <br>
+<strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">window.alert("...")</strong> → Exibe uma caixa de alerta com a mensagem escolhida.  
+  <br>
+  <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">function mostrarConfirm()</strong> → Cria uma função chamada <em>mostrarConfirm</em>.  
+  <br>
+  <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">window.confirm("...")</strong> → Exibe uma caixa de confirmação com a opção de escolher <em>OK</em> ou <em>Cancelar</em>.  
+  <br>
+  <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">function mostrarPrompt()</strong> → Cria uma função chamada <em>mostrarPrompt</em>.  
+  <br>
+  <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">indow.prompt("...")</strong> → Exibe uma caixa de entrada para o usuário digitar algum texto.  
+
+  <ul>
+    <li><strong>function</strong> → Cria um bloco de código reutilizável com ações.</li>
+    <li><strong>window</strong> → Representa a janela do navegador.</li>
+    <li><strong>alert</strong> → Mostra uma mensagem simples ao usuário.</li>
+    <li><strong>confirm</strong> → Pergunta ao usuário e retorna verdadeiro (OK) ou falso (Cancelar).</li>
+    <li><strong>prompt</strong> → Permite que o usuário digite uma resposta.</li>
+  </ul>
+
+  <h3>Resumindo:</h3>
+  <p>Essas funções mostram caixas de diálogo diferentes no navegador: <em>alert</em> para avisos, <em>confirm</em> para perguntas de confirmação e <em>prompt</em> para pedir entradas de texto do usuário.</p>
+
+  <h3>Quando usar:</h3>
+  <p>Você pode usar esses comandos quando precisar interagir diretamente com o usuário, como exibir mensagens, pedir confirmação antes de executar algo, ou solicitar dados.</p>
+</div>
+
+      <strong id="byid">2.getElementById()</strong>
+      <ul>
+        <li>
+          <strong>Quando usar?</strong> Procura no documento um elemento HTML com base na ID
+          especificada
+        </li>
+        <li>
+          <strong>Para o que serve?</strong> Permite acessar e manipular o elemento selecionado pela ID dele usando JavaScript.
+        </li>
+        <li><strong>Exemplo prático:</strong></li>
+      </ul>
+      <div class="demo">
+          <H3>Meu Código Java Script</H3>
+          <!-- Parágrafo com id "teste" que será alterado pelo botão -->
+          <p id="teste"> Quando clicar o botão abaixo, esse texto vai mudar</p>
+          <!-- Botão que altera o texto do parágrafo acima -->
+          <button type="button" onclick="document.getElementById('teste').innerHTML=('Texto Mudou')"> Clique aqui</button>
+        </div>
+
+        <div class="codigo">
+  <pre><code>&lt;h3&gt;Meu Código Java Script &lt;/h3&gt;
+
+&lt;!-- Parágrafo com id "teste" que será alterado pelo botão --&gt;
+
+&lt;p id="teste"&gt; Quando clicar o botão abaixo, esse texto vai mudar &lt;/p&gt;
+
+&lt;!-- Botão que altera o texto do parágrafo acima --&gt;  
+
+&lt;button type="button" onclick="document.getElementById('teste').innerHTML=('Texto Mudou')"&gt; Clique aqui&lt;/button&gt; </code></pre>
+  </div>
+
+      <h4>Explicação do código:</h4>
+      
+      <ul>
+        <li><strong>onclick:</strong> Serve para indicar que quando der o clique, a ação a seguir vai acontecer.</li>
+        <li><strong>document.getElementById("teste"): </strong>Aqui ele indica que ele vai procurar no documento, um elemento cuja a ID é "teste".</li>
+        <li><strong>innerHTML = ("Texto mudou") :</strong> o innerHTML ele vai obter o código HTML interno, e definir que quando clicar o botão ele vai ser "Texto Mudou".</li>
+      </ul>
+
+      <h4 id="exemplo">Temos outro exemplo também:</h4>
+
+      <div class="codigo1">
+        <div id="conteudo"> 
+      <!-- Botão para ligar a luz (troca a imagem) -->
+      <button onclick="document.getElementById('minhaimagem') .src='imagens/pic_bulbon.gif'"> Liga a luz</button>
+      <!-- Imagem da lâmpada, começa desligada -->
+<img id="minhaimagem" src="imagens/pic_bulboff.gif" style="width:100px">
+      <!-- Botão para desligar a luz (troca a imagem) -->
+<button onclick='document.getElementById("minhaimagem").src="imagens/pic_bulboff.gif"'>Desliga a luz</button>
+</div>
+</div>
+<div class="codigo">
+<pre><code>&lt;!-- Botão para ligar a luz (troca a imagem) --&gt;
+
+&lt;button onclick="document.getElementById('minhaimagem') .src='imagens/pic_bulbon.gif'"&gt; Liga a luz &lt;/button&gt;
+
+&lt;!-- Imagem da lâmpada, começa desligada --&gt;
+
+&lt;img id="minhaimagem" src="imagens/pic_bulboff.gif" style="width:100px"&gt;
+
+&lt;!-- Botão para desligar a luz (troca a imagem) --&gt;
+
+&lt;button onclick='document.getElementById("minhaimagem").src="imagens/pic_bulboff.gif"'&gt;Desliga a luz &lt;/button&gt; </pre> </code> </div> 
+
+<h4>Explicação do Código:</h4>
+<ul>
+<li><strong>1º button:</strong> O primeiro &lt;button&gt;  o atributo getElementById vai buscar o elemento que vai mudar cuja a id é "minhaimagem" e em seguida um .src com uma imagem com a lâmpada ligada </li>
+<li><strong>img:</strong> Uma imagem que define como vai ficar sem nenhuma alteração, que é a lâmpada desligada com a id "minhaimagem"</li>
+<li><strong>2º button:</strong> O segundo &lt;button&gt;  o atributo getElementById vai buscar o elemento que vai mudar cuja a id é "minhaimagem" e em seguida um .src com uma imagem com a lâmpada desligada</li>
+</ul>
+
+<div class="resumo">
+  <h3>O que significa isso?</h3>
+
+  <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">Imagem (<em>img</em>)</strong> → Mostra a lâmpada apagada no início (<em>src="imagens/pic_bulboff.gif"</em>) e tem o <em>id="minhaimagem"</em>. <br>
+  <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">Botão "Liga a luz"</strong> → Quando clicado, usa <em>getElementById("minhaimagem")</em> e troca o <em>src</em> para a imagem da lâmpada acesa (<em>pic_bulbon.gif</em>). <br>
+ <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;"> Botão "Desliga a luz"</strong> → Faz o mesmo processo, mas troca o <em>src</em> para a lâmpada apagada (<em>pic_bulboff.gif</em>). <br>
+
+  <ul>
+    <li><strong>getElementById("minhaimagem")</strong> → busca a imagem</li>
+    <li><strong>.src = "imagens/pic_bulbon.gif"</strong> → troca a imagem para lâmpada acesa</li>
+    <li><strong>.src = "imagens/pic_bulboff.gif"</strong> → troca a imagem para lâmpada apagada</li>
+  </ul>
+
+  <h3>Resumindo:</h3>
+  <p>Esse código controla uma imagem (a lâmpada), trocando o arquivo exibido (<em>src</em>) de acordo com o botão clicado.</p>
+
+  <h3>Quando usar:</h3>
+  <p>Quando você quiser alterar dinamicamente uma imagem em sua página através de eventos, como clique em botões.</p>
+</div>
+
+        <strong id="bytag">3.getElementsByTagName()</strong>
+      <ul>
+        <li>
+          <strong>Quando usar?</strong> Localiza todos os elementos de uma página HTML que possuem uma determinada tag e retorna uma lista deles para que possam ser manipulados com JavaScript.
+        </li>
+        <li>
+          <strong>Para o que serve?</strong> Localizar elementos pelo nome da tag na página e permitir alterar seu conteúdo ou estilo com JavaScript.
+        </li>
+        <li><strong>Exemplo Prático:</strong></li>
+
+        <div class="demo">
+        <div id="minhaDiv">
+          <h3>Quando eu clicar no botão todos os parágrafos vão ficar vermelhos e mudar o texto</h3>
+        <!-- Três parágrafos que serão modificados pelo botão -->
+        <p>Oi</p>
+        <p>Jossuã</p>
+        <p>Andrade</p>
+        <!-- Botão que chama a função para modificar os parágrafos -->
+        <button onclick="mudarParagrafos()"> Clique aqui </button>
+        </div>
+        </div>
+
+      
+        <div class="codigo">
+        
+<pre><code>  html
+&lt;div id="minhaDiv"&gt;
+&lt;h3&gt;Quando eu clicar no botão todos os parágrafos vão ficar vermelhos e mudar o texto&lt;/h3&gt;
+
+&lt;!-- Três parágrafos que serão modificados pelo botão --&gt;
+&lt;p&gt;Oi&lt;/p&gt;
+&lt;p&gt;Jossuã&lt;/p&gt;
+&lt;p&gt;Andrade&lt;/p&gt;
+
+&lt;!-- Botão que chama a função para modificar os parágrafos --&gt;
+&lt;button onclick="mudarParagrafos()"&gt; Clique aqui &lt;/button&gt;
+&lt;/div&gt; </code></pre>
+  </div>  
+       
+
+    <div class="codigo">
+     <pre><code>  &lt;script&gt;
+// Função que altera todos os parágrafos dentro da div "minhaDiv"//
+  function mudarParagrafos() {
+    let div = document.getElementById("minhaDiv");
+
+    // Seleciona todos os parágrafos dentro da div
+    let paragrafos = div.getElementsByTagName("p");
+
+    for (let i = 0; i &lt; paragrafos.length; i++) {
+      paragrafos[i].style.color = "red";
+      paragrafos[i].innerHTML = "Parágrafo modificado!";
+    }
+  }
+&lt;/script&gt;</code></pre>
+</div>
+
+<h4>Explicação do código</h4>
+<ul>
+  <li><strong>fuction mudarParagrafos() :</strong> Cria uma função que o nome é Paragrafos</li>
+  <li><strong>let div = document.getElementById("minhaDiv") :</strong> Cria a variável div que pega todo o conteúdo da div com id "minhaDiv"</li>
+  <li><strong>let paragrafos = div.getElementsByTagName("p") :</strong> Cria uma variavel let com o nome paragrafos e pega todos os parágrafos < p > que estão dentro da div</li>
+
+  <li><strong>for (let i = 0; i < paragrafos.length; i++) :</strong> 
+Cria um loop que começa com i=0, e enquanto i for menor que o tamanho da variavel paragrafos, ele vai executar o código dentro do loop, e depois de cada execução, ele incrementa i em 1 (i++)</li>
+  </li>
+
+  <li><strong>paragrafos[i].style.color = "red" :</strong> Muda a cor do texto do parágrafo para vermelho</li>
+  <li><strong>paragrafos[i].innerHTML = "Parágrafo modificado!"</strong> Troca o conteúdo do parágrafo pelo texto "Parágrafo modificado!"</li>
+</ul>
+
+<div class="resumo">
+
+<h3>O que significa isso? </h3>
+
+  <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">Função Criada </strong>→ Existe uma função chamada mudarParagrafos(). <br>
+  <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">Variável <em>div</em> </strong>→ Guarda o conteúdo da div que tem o id="minhaDiv". <br>
+  <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">Variável <em>paragrafos</em></strong>→ Pega todos os elementos < p > que estão dentro dessa div. <br>
+  <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">Loop <em>for</em></strong> → Percorre todos os parágrafos.
+  <ul>
+    <li><strong>i = 0</strong>  → começa no primeiro parágrafo</li>
+    <li><strong>i < paragrafos.length </strong> → vai até o último parágrafo</li>
+    <li><strong>i++ </strong> → aumenta 1 a cada volta</li>
+  </ul>
+
+  <h3>Resumindo: <p>Esse código pega todos os < p > que estão dentro da div minhaDiv, passa por eles um por um com o for e altera o estilo (cor vermelha) e o texto (mostrando “Parágrafo modificado!”).</h3>
+<h3>Quando usar: <p>Esta função seria chamada através de um evento (como o clique de um botão) para transformar visualmente todos os parágrafos de uma seção específica da página.</p> </h3>
+</div>
+
+
+<strong id="byclass">4.getElementsByClassName()</strong>
+  <ul>
+    <li><strong>Quando usar?</strong> Procura no documento elementos com base na Class
+          especificada</li>
+    <li><strong>Para o que serve?</strong> Permite acessar e manipular os elementos com CLASS selecionado usando JavaScript.</li>
+    <li><strong>Exemplo Prático:</strong></li>
+  </ul>
+  
+  <div class="demo">
+  <div class="mudarclass">
+    <!-- Três h5 que serão modificados pelo botão -->
+    <h5>Olá</h5>
+    <h5>Olá</h5>
+    <h5>Olá</h5>
+    <!-- Botão que chama a função para modificar a classe -->
+    <button onclick="mudarClass()"> Clique aqui</button>
+  </div>
+   </div>
+
+
+  <div class="codigo">
+
+<pre><code>html
+&lt;div class="mudarclass"&gt;
+
+&lt;!-- Três h5 que serão modificados pelo botão --&gt;
+&lt;h5&gt;Olá&lt;/h5&gt;
+&lt;h5&gt;Olá&lt;/h5&gt;
+&lt;h5&gt;Olá&lt;/h5&gt;
+
+&lt;!-- Botão que chama a função para modificar a classe --&gt;
+&lt;button onclick="mudarClass()"&gt; Clique aqui&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </div>
+
+  <div class="codigo"> 
+
+
+<pre><code>&lt;script&gt;
+// Função que altera o fundo dos elementos com a classe "mudarclass" //
+function mudarClass() {
+
+let elementos = document.getElementsByClassName("mudarclass");
+
+for (let i = 0; i &lt; elementos.length; i++) {
+
+elementos[i].style.backgroundColor = "gray";
+
+}
+}
+&lt;/script&gt; </code></pre>
+
+  </div>
+
+  <h3>Explicação do código:</h3>
+  <ul>
+    <li><strong>function mudarClass()</strong> → Cria uma função chamada <em>mudarClass</em> que será executada quando chamada (pelo botão, nesse caso).</li>
+    <li><strong>document.getElementsByClassName("mudarclass")</strong> → Seleciona todos os elementos que possuem a classe <em>mudarclass</em>.</li>
+    <li><strong>for (let i = 0; i &lt; elementos.length; i++)</strong> → Percorre todos os elementos selecionados, um por um.</li>
+    <li><strong>elementos[i].style.backgroundColor = "gray"</strong> → Altera o fundo de cada elemento para cinza.</li>
+  </ul>
+
+  <div class="resumo">
+  <h3>O que significa:</h3>
+  <ul>
+    <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">function mudarClass()</strong> → Cria a função chamada <em>mudarClass</em>, que só será executada quando for chamada (neste caso, pelo botão). Usamos a função para organizar o código e só executar quando quisermos. 
+    <br>
+
+   <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">let elementos = document.getElementsByClassName("mudarclass")</strong> → Cria uma variável chamada <em>elementos</em> que guarda todos os itens que têm a classe <em>mudarclass</em>. Como pode haver vários, o JavaScript retorna uma lista (HTMLCollection). Por isso não usamos <code>getElementById</code>, já que o ID só pega um único elemento.
+
+    <li><strong>for (let i = 0; i &lt; elementos.length; i++)</strong> → Cria um loop para percorrer todos os itens que estão dentro da lista <em>elementos</em>.  
+    - <code>let i = 0</code> → Começa no primeiro item da lista.  
+    - <code>i &lt; elementos.length</code> → Continua até o último item da lista.  
+    - <code>i++</code> → Faz o contador ir aumentando de 1 em 1, passando por todos os itens.  
+    O loop é necessário porque <em>getElementsByClassName</em> retorna vários elementos, então precisamos percorrer todos.</li>
+
+    <li><strong>elementos[i].style.backgroundColor = "gray"</strong> → Pega cada elemento da lista (um por vez, com <code>[i]</code>) e muda o estilo dele. No caso, altera o <em>backgroundColor</em> para cinza.  
+    O <code>[i]</code> é importante porque indica qual dos elementos queremos modificar naquele momento do loop.</li>
+  </ul>
+
+    <h3>Resumindo:</h3>
+  <p>Ao clicar no botão, o JavaScript pega todos os elementos com a classe <em>mudarclass</em>, percorre a lista e muda o fundo de cada um para cinza. Usamos <code>getElementsByClassName</code> porque há vários elementos e o <code>for</code> para aplicar a alteração em cada item.</p>
+
+  <h3>Quando usar:</h3>
+  <ul>
+    <p>Quando você precisa aplicar a <strong style="font-size: 1.1rem; box-shadow: none; color: black; background: none; padding: 0;">mesma mudança em vários elementos</strong> (cor, texto, classe, atributo etc.).</p>
+    <p>Para <strong style="font-size: 1.1rem; box-shadow: none; color: black; background: none; padding: 0;">ações em lote</strong>: destacar vários cards, marcar itens selecionados, esconder/mostrar um grupo.</p>
+    <p>Quando os itens compartilham a <strong style="font-size: 1.1rem; box-shadow: none; color: black; background: none; padding: 0;">mesma classe</strong>. Se for só um elemento, use <code>getElementById</code>; se quiser seletores CSS mais flexíveis, <code>querySelectorAll(".classe")</code> também funciona.</p>
+  </ul>
+</div>
+
+
+<strong id="selector">5.querySelector()</strong>
+
+  <ul>
+    <li><strong>Função:</strong> é usada para selecionar o primeiro elemento de um documento HTML que corresponda a um seletor CSS específico  </li>
+    <li><strong>Para que serve:</strong> Usado para encontrar o primeiro elemento HTML que combina com um seletor CSS (como .classe, #id, ou tag) e permitir alterações no conteúdo, estilo ou eventos desse elemento.</li>
+    <li> <strong>Exemplo prático:</strong></li>
+  </ul>
+
+<div class="demo">
+  <div class="querySelector">
+    <!-- Três h3 que serão modificados pelo botão -->
+    <h3>Query Selector</h3>
+    <h3>Query Selector</h3>
+    <h3>Query Selector</h3>
+    <!-- Botão que chama a função para modificar o segundo h3 -->
+    <button onclick="mudarQuery()"> Clica ai</button>
+  </div>
+</div>
+
+
+
+<div class="codigo">
+ <pre><code>html
+&lt;div class="querySelector"&gt;
+
+&lt;!-- Três h3 que serão modificados pelo botão --&gt;
+&lt;h3&gt;Query Selector&lt;/h3&gt;
+&lt;h3&gt;Query Selector&lt;/h3&gt;
+&lt;h3&gt;Query Selector&lt;/h3&gt;
+
+&lt;!-- Botão que chama a função para modificar o segundo h3 --&gt;
+&lt;button onclick="mudarQuery()"&gt; Clica ai&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="codigo"><pre><code>&lt;script&gt;
+//Função que altera o tamanho da fonte do segundo h3 dentro da div "querySelector"//
+function mudarQuery() {
+
+  let query = document.querySelector(".querySelector h3:nth-child(2)"); { //Abre aspas para colocar os elementos que serão estilizados//
+
+  query.style.fontSize = "30px"; //Altera o tamanho da fonte do segundo h3 para 30px //
+  query.style.color = "red"; //Altera a cor do segundo h3 para vermelho //
+}
+} //Fecha aspas para fechar a função e a estilização do elemento//
+&lt;/script&gt;</code></pre> </div>
+
+
+<h3>Explicação do código:</h3>
+        <ul>
+            <li><strong>function mudarQuery()</strong> → Cria uma função chamada <em>mudarQuery</em> que será executada quando chamada (pelo botão, nesse caso).</li>
+            <li><strong>let query = document.querySelector(".querySelector h3:nth-child(3)")</strong> → Seleciona especificamente o terceiro elemento h3 dentro do elemento com classe "querySelector" e armazena na variável query.</li>
+            <li><strong>query.style.fontSize = "30px"</strong> → Altera o tamanho da fonte do elemento selecionado para 30 pixels.</li>
+            <li><strong>query.style.color = "red"</strong> → Altera a cor do texto do elemento selecionado para vermelho.</li>
+        </ul>
+
+        <div class="resumo">
+            <h3>O que significa:</h3>
+            <ul>
+                <strong style="font-size: 1.1rem; box-shadow: none; color: black; background: none; padding: 0;">function mudarQuery()</strong> → Cria a função chamada <em>mudarQuery</em>, que só será executada quando for chamada (neste caso, pelo botão). Usamos a função para organizar o código e só executar quando quisermos.
+                <br><br>
+                <strong style="font-size: 1.1rem; box-shadow: none; color: black; background: none; padding: 0;">let query = document.querySelector("querySelector h3:nth-child(3)")</strong> → Cria uma variável chamada <em>query</em> que guarda um elemento específico. O <code>querySelector</code> usa seletores CSS para encontrar elementos. Neste caso:
+                - <code>querySelector</code> → Busca elementos com a classe "querySelector"
+                - <code>h3</code> → Dentro dessa classe, procura elementos h3
+                - <code>:nth-child(3)</code> → Especificamente o terceiro filho h3
+                Diferente do <code>getElementById</code> que pega por ID, o <code>querySelector</code> é mais flexível e usa seletores CSS.
+                
+                <li><strong>query.style.fontSize = "30px"</strong> → Pega o elemento armazenado na variável <em>query</em> e altera a propriedade CSS <em>fontSize</em> para 30 pixels. O <code>.style</code> permite modificar estilos CSS diretamente via JavaScript.</li>
+                
+                <li><strong>query.style.color = "red"</strong> → Pega o mesmo elemento e altera a propriedade CSS <em>color</em> para vermelho. Como já temos o elemento na variável <em>query</em>, podemos aplicar múltiplas mudanças de estilo.</li>
+            </ul>
+            
+            <h3>Resumindo:</h3>
+            <p>Ao clicar no botão, o JavaScript usa um seletor CSS para encontrar especificamente o terceiro elemento h3 dentro da div com classe "querySelector", depois altera o tamanho da fonte para 30px e a cor para vermelho. Usamos <code>querySelector</code> com seletores CSS avançados para selecionar elementos específicos de forma mais precisa que <code>getElementById</code>.</p>
+            
+            <h3>Quando usar:</h3>
+            <ul>
+                <p>Quando você precisa aplicar a <strong style="font-size: 1.1rem; box-shadow: none; color: black; background: none; padding: 0;">mudança específica em um único elemento</strong> usando seletores CSS complexos como nth-child, classes específicas, etc.</p>
+                <p>Para <strong style="font-size: 1.1rem; box-shadow: none; color: black; background: none; padding: 0;">seleções precisas</strong>: pegar o segundo item de uma lista, o terceiro parágrafo de uma div, elementos em posições específicas.</p>
+                <p>Quando você quer <strong style="font-size: 1.1rem; box-shadow: none; color: black; background: none; padding: 0;">flexibilidade de seletores CSS</strong>. Se for só um ID, use <code>getElementById</code>; se quiser vários elementos, use <code>querySelectorAll</code>; para um elemento específico com seletor complexo, use <code>querySelector</code>.</p>
+            </ul>
+        </div>
+
+<strong id="selectorall">6.querySelectorAll()</strong>
+
+<ul>
+  <li><strong>Função:</strong>É usada para selecionar todos os elementos em um documento HTML que correspondem a um ou mais seletores CSS especificados </li>
+  <li><strong>Para que serve:</strong> Serve para selecionar todos os elementos de uma página que correspondam a um ou mais seletores CSS especificados.</li>
+  <li><strong>Exemplo prático:</strong></li>
+</ul>
+
+<div class="demo">
+ <!-- Três parágrafos com a mesma classe para serem modificados pelo botão -->
+ <p class="mensagem">Mensagem 1</p>
+  <p class="mensagem">Mensagem 2</p>
+  <p class="mensagem">Mensagem 3</p>
+    <!-- Botão para acionar a função -->
+  <button onclick="alterarMensagens()">Alterar mensagens</button>
+  </div>
+
+
+<div class="codigo">
+
+  <pre><code> html 
+&lt;!-- Três parágrafos com a mesma classe para serem modificados pelo botão --&gt;
+
+&lt;p class="mensagem"&gt;Mensagem 1&lt;/p&gt;
+&lt;p class="mensagem"&gt;Mensagem 2&lt;/p&gt;
+&lt;p class="mensagem"&gt;Mensagem 3&lt;/p&gt;
+
+&lt;!-- Botão para acionar a função --&gt;
+&lt;button onclick="alterarMensagens()"&gt;Alterar mensagens&lt;/button&gt;</code></pre>
+
+</div>
+
+<div class="codigo">
+
+<pre><code>&lt;script&gt;
+//Função que altera todos os parágrafos com a classe "mensagem"//
+function alterarMensagens() {
+  const mensagens = document.querySelectorAll(".mensagem");
+
+  mensagens.forEach((mensagem, index) =&gt; {
+    mensagem.textContent = `Mensagem alterada ${index + 1}`;
+    mensagem.style.color = "blue";
+  });
+}
+&lt;/script&gt;</code></pre>
+</div>
+
+<div class="resumo">
+            <h3>O que significa:</h3>
+            <ul>
+                <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">function alterarMensagens()</strong> → Cria a função chamada <em>alterarMensagens</em>, que só será executada quando for chamada (neste caso, pelo botão). Usamos a função para organizar o código e só executar quando quisermos.
+                <br><br>
+               <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">const mensagens = document.querySelectorAll(".mensagem")</strong> → Cria uma variável chamada <em>mensagens</em> que guarda todos os elementos que têm a classe "mensagem". O <code>querySelectorAll</code> retorna uma lista (NodeList) com todos os elementos encontrados. Diferente do <code>querySelector</code> que pega apenas o primeiro, este pega todos os elementos com essa classe.
+                
+                <li><strong>mensagens.forEach(function(mensagem, index))</strong> → Usa o método <code>forEach</code> para percorrer cada elemento da lista <em>mensagens</em>. Para cada elemento:
+                - <code>mensagem</code> → É o elemento atual sendo processado
+                - <code>index</code> → É a posição do elemento na lista (0, 1, 2, etc.)
+                O <code>forEach</code> é uma alternativa moderna ao loop <code>for</code> tradicional.</li>
+                
+                <li><strong>mensagem.textContent = "Mensagem alterada " + (index + 1)</strong> → Para cada elemento, altera o conteúdo de texto. O <code>textContent</code> substitui apenas o texto (sem HTML). A expressão <code>(index + 1)</code> soma 1 ao índice para numerar de 1, 2, 3... ao invés de 0, 1, 2...</li>
+                
+                <li><strong>mensagem.style.color = "blue"</strong> → Para cada elemento processado, altera a propriedade CSS <em>color</em> para azul. Como estamos dentro do <code>forEach</code>, isso é aplicado a todos os elementos da lista.</li>
+            </ul>
+            
+            <h3>Resumindo:</h3>
+            <p>Ao clicar no botão, o JavaScript seleciona todos os elementos com classe "mensagem", percorre cada um usando <code>forEach</code>, altera o texto para "Mensagem alterada" seguido de um número sequencial, e muda a cor para azul. Usamos <code>querySelectorAll</code> para pegar múltiplos elementos e <code>forEach</code> para processar cada um de forma moderna e limpa.</p>
+            
+            <h3>Quando usar:</h3>
+            <ul>
+                <p>Quando você precisa aplicar a <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">mesma mudança em vários elementos</strong> que compartilham uma classe comum.</p>
+                <p>Para <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">processamento em lote com numeração</strong>: alterar múltiplos cards, mensagens, itens de lista com conteúdo sequencial.</p>
+                <p>Quando você quer <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">código mais moderno e legível</strong>. O <code>forEach</code> é mais limpo que loops <code>for</code> tradicionais e o <code>querySelectorAll</code> oferece flexibilidade de seletores CSS.</p>
+            </ul>
+        </div>
+
+<strong id="inner">7.innerHTML</strong>
+
+<ul>
+  <li><strong>Quando usar?</strong> Para alterar ou obter o conteúdo HTML de um elemento.</li>
+  <li><strong>Para que serve:</strong> Serve para ler ou alterar o conteúdo HTML dentro de um elemento, permitindo que você mude texto, tags e até imagens dinamicamente.
+</li>
+  <li><strong>Exemplo Prático:</strong></li>
+</ul>
+
+<div class="demo"> 
+<!-- Div que terá seu conteúdo alterado pelo botão -->
+<div id="conteudo1">
+  <p>Conteúdo original</p>
+<button onclick="alterarConteudo()">Alterar conteúdo</button>
+</div>
+</div>
+
+<div class="codigo">
+
+<pre><code>html
+&lt;!-- Div que terá seu conteúdo alterado pelo botão --&gt;
+&lt;div id="conteudo1"&gt;
+&lt;p&gt;Conteúdo original&lt;/p&gt;
+&lt;button onclick="alterarConteudo()"&gt;Alterar conteúdo&lt;/button&gt;
+&lt;/div&gt;</code></pre> </div>
+
+<div class="codigo">
+ <pre><code>&lt;script&gt;
+//Função que altera o conteúdo da div "conteudo1"//
+  function alterarConteudo() {
+    let conteudo = document.getElementById("conteudo1");
+
+    conteudo.innerHTML = "<p>>Novo conteúdo adicionado!</p>"; // Altera o conteúdo HTML interno da div
+  }
+&lt;/script&gt;</code></pre>
+</div>
+
+  <h3>Explicação do código:</h3>
+        <ul>
+            <li><strong>function alterarConteudo()</strong> → Cria uma função chamada <em>alterarConteudo</em> que será executada quando chamada (pelo botão, nesse caso).</li>
+            <li><strong>let conteudo = document.getElementById("conteudo")</strong> → Seleciona o elemento que possui o ID "conteudo" e armazena na variável conteudo.</li>
+            <li><strong>conteudo.innerHTML = "&lt;h2&gt;Novo conteúdo adicionado!&lt;/h2&gt;"</strong> → Altera todo o conteúdo HTML interno do elemento selecionado.</li>
+        </ul>
+
+        <div class="resumo">
+            <h3>O que significa:</h3>
+            <ul>
+                <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">function alterarConteudo()</strong> → Cria a função chamada <em>alterarConteudo</em>, que só será executada quando for chamada (neste caso, pelo botão). Usamos a função para organizar o código e só executar quando quisermos.
+                <br><br>
+               <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">let conteudo = document.getElementById("conteudo")</strong> → Cria uma variável chamada <em>conteudo</em> que guarda o elemento HTML que possui o ID "conteudo". O <code>getElementById</code> busca especificamente um elemento pelo seu ID único na página.
+                
+                <li><strong>conteudo.innerHTML = "&lt;h2&gt;Novo conteúdo adicionado!&lt;/h2&gt;"</strong> → Substitui completamente o conteúdo HTML interno do elemento selecionado. O <code>innerHTML</code> permite inserir código HTML (tags, elementos, formatação), diferente do <code>textContent</code> que insere apenas texto simples. Neste caso, está inserindo um elemento &lt;h2&gt; com o texto "Novo conteúdo adicionado!".</li>
+            </ul>
+            
+            <h3>Resumindo:</h3>
+            <p>Ao clicar no botão, o JavaScript localiza o elemento com ID "conteudo" e substitui todo seu conteúdo HTML interno por um novo elemento &lt;h2&gt;. Usamos <code>getElementById</code> para selecionar um elemento específico e <code>innerHTML</code> para inserir conteúdo HTML formatado.</p>
+            
+            <h3>Quando usar:</h3>
+            <ul>
+                <p>Quando você precisa <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">substituir completamente o conteúdo</strong> de um elemento específico com novo HTML.</p>
+                <p>Para <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">atualizações dinâmicas de conteúdo</strong>: trocar seções inteiras, carregar novos componentes, atualizar áreas específicas da página.</p>
+                <p>Quando você quer <strong style="font-size: 1rem; box-shadow: none; color: black; background: none; padding: 0;">inserir HTML formatado</strong>. Use <code>innerHTML</code> para HTML com tags; <code>textContent</code> para texto simples; <code>getElementById</code> para elementos únicos por ID.</p>
+            </ul>
+        </div>
+
+<strong id="style">8.style</strong>
+
+
+
+</div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
