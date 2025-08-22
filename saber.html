@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dicionário Java script - iniciantes</title>
+    <title>Dicionário Java script</title>
     <!-- Ícone da página -->
     <link
       rel="icon"
@@ -13,6 +13,7 @@
     
     <!-- CSS principal -->
     <link rel="stylesheet" href="saber.css">
+    <link rel="stylesheet" href="normalizze.css">
     <!-- CSS para highlight.js (realce de código) -->
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
@@ -24,8 +25,13 @@
   </head>
   <body>
   <div class="container">
-    <a href="index.html">Voltar</a>
-    <h1>O que eu preciso saber para programar em Java Script?</h1>
+
+    <a href="index.html"> <i id="casa" class="fa-solid fa-house"></i></a>
+
+    <h3 id= "titulo">O que eu preciso saber para programar em Java Script?</h3>
+
+      
+
 
     <p>Para ter uma boa noção de programação em Java Script, deve-se ter uma boa noção dos elementos básicos do Java Script:</p>
 
@@ -62,6 +68,7 @@
              <div class="conteudo">
           <p>let é uma palavra-chave usada para declarar variáveis em JavaScript. As variáveis declaradas com let têm escopo de bloco, o que significa que elas só são acessíveis dentro do bloco onde foram definidas.</p>
           <pre><code class="language-javascript">let nome = "João";</code></pre>
+
           <ul>
             
             <p>Pensa no for como um contador que anda pelos botões um por um. Ele tem 3 partes: <br><br>
@@ -71,7 +78,7 @@
 
 <p>Por quê 0? Porque listas em JS começam no 0: o 1º botão é botoes[0], o 2º é botoes[1], etc.</p> <br>
 
-<li>condição: <pre><code>i < botoes.length</code></pre></li>
+<li>condição: <pre><code> i < botoes.length</code></pre></li>
 
 <p>Pergunta: “ainda existe botão na posição i?”</p> <br>
 
@@ -81,7 +88,9 @@
 
 <li>incremento:<pre><code> i++</code></pre></li>
 
-depois de cada volta, faz i = i + 1 (vai para o próximo botão). </ul></p>
+depois de cada volta, faz i = i + 1 (vai para o próximo botão). </p> 
+
+</ul>
 
       </div>
        

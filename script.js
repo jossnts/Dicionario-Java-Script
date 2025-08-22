@@ -20,8 +20,12 @@
             // Seleciona todos os parágrafos dentro da div
             let paragrafos = div.getElementsByTagName("p");
             // Loop para alterar cada parágrafo
+            
+
             for (let i = 0; i < paragrafos.length; i++) {
-              paragrafos[i].style.color = "red";
+              
+              paragrafos[i].style.color = "red"; 
+
               paragrafos[i].innerHTML = "Parágrafo modificado!";
             }
           }
@@ -42,8 +46,7 @@
       }
     }
 
-
-
+    
 
 
 
@@ -79,10 +82,11 @@ function mudarQuery() {
 
     // Função que altera o conteúdo da div "conteudo1"
   function alterarConteudo() {
-    let conteudo = document.getElementById("conteudo1");
+    let conteudo = document.getElementById("conteudo1");{
     conteudo.innerHTML = "<p>Novo conteúdo adicionado!</p>"; // Altera o conteúdo HTML interno da div
   }
-
+}
+  
 
 
 
@@ -107,4 +111,4 @@ function toggleContent(index) {
 
 
 
-  window.alert("Página ainda em desenvolvimento!"); // Exibe um alerta informando que o site está em desenvolvimento
+  window.alert("Página ainda em desenvolvimento!"); // Exibe um alerta informando que o site está em desenvolvimento //
